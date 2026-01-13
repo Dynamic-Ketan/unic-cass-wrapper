@@ -1,0 +1,18 @@
+PROJECT_DIR = $(shell pwd)
+LIBRELANE_DIR ?= $(PROJECT_DIR)/librelane
+
+
+.PHONY: smoke-test
+smoke-test: 
+	nix-shell --pure $(LIBRELANE_DIR) --run "PDK_ROOT=$(PDK_ROOT) PDK=$(PDK) librelane --smoke-test"
+
+librelane: final/gds/$(TOP).gds
+.PHONY: librelane
+
+final/gds/$(TOP).gds: $(CFG_FILES)
+	# Run librelane to generate the layout
+	nix-shell --pure $(LIBRELANE_DIR) --run "PDK_ROOT=$(PDK_ROOT) PDK=$(PDK) librelane --run-tag $(TAG) --overwrite --manual-pdk $(CONFIG_FILE)"
+
+	# copy final results to top directory
+	rm -rf $(PROJECT_DIR)/final
+	cp -r $(PROJECT_DIR)/runs/$(TAG)/final $(PROJECT_DIR)
