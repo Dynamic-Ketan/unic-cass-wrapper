@@ -15,4 +15,5 @@ jobs:
       shell: bash
       run: |
         source /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
+        git config --global --add safe.directory "$(pwd)"
         make
