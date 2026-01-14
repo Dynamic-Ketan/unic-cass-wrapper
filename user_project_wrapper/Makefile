@@ -3,6 +3,7 @@ TAG = $(TOP)_tag
 PROJECT_DIR = ../
 LIBRELANE_DIR ?= $(PROJECT_DIR)/librelane
 PDK_ROOT = $(PROJECT_DIR)/IHP-Open-PDK
+PDK=ihp-sg13g2
 
 CONFIG_FILE = $(PROJECT_DIR)/$(TOP)/config.json
 
