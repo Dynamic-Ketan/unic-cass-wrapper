@@ -1,0 +1,15 @@
+name: Librelane Digital Flow (UNIC-CASS)
+
+on: [push, workflow_dispatch]
+
+jobs:
+  librelane:
+    runs-on: ubuntu-latest
+    container:
+      image: isaiassh/unic-cass-tools:1.0.6
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: physical implemetation
+      run: make
