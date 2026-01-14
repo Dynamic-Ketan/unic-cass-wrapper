@@ -1,6 +1,8 @@
 PROJECT_DIR = $(shell pwd)
 LIBRELANE_DIR ?= $(PROJECT_DIR)/librelane
 
+.PHONY: all
+all: librelane
 
 .PHONY: smoke-test
 smoke-test: 
