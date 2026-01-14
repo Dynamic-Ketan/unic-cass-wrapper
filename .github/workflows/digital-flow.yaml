@@ -12,6 +12,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: physical implementation
+      shell: bash
       run: |
         source /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
         make
