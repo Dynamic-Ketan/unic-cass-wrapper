@@ -23,7 +23,7 @@ inout VGND,    // Common digital ground
     output p);
 
 
-    parameter size = 8;
+    parameter size = 16;
 
 
     wire[size-1:1] pp;

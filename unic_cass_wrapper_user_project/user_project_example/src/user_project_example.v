@@ -8,8 +8,8 @@ module user_project_example(
     input  wire [16:0] ui_PAD2CORE,
     output  wire [16:0] uo_CORE2PAD
 );
-    assign uo_CORE2PAD[8:1] = ui_PAD2CORE[16:9];
-    assign uo_CORE2PAD[16:9] = 8'd1; 
+    //assign uo_CORE2PAD[8:1] = ui_PAD2CORE[16:9];
+    assign uo_CORE2PAD[16:1] = 16'd1; 
 
     spm spm_inst(
     `ifdef USE_POWER_PINS
@@ -19,7 +19,7 @@ module user_project_example(
     .clk(clk_i),
     .rst(rst_ni),
     .y(ui_PAD2CORE[0]),
-    .x(ui_PAD2CORE[8:1]),
+    .x(ui_PAD2CORE[16:1]),
     .p(uo_CORE2PAD[0])
     );
 
