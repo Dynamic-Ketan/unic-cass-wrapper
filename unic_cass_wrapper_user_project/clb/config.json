@@ -1,0 +1,22 @@
+{
+    "meta": {
+        "version": 3,
+        "flow": "Classic",
+"substituting_steps":{
+            "KLayout.DRC": null,
+            "Magic.DRC": null,
+"Checker.XOR": null
+        }
+    },
+
+    "DESIGN_NAME": "clb",
+    "VERILOG_FILES": "dir::src/*.v",
+
+    "CLOCK_PORT": "clk_i",
+    "CLOCK_PERIOD": 10,
+
+    "FP_CORE_UTIL": 0.05,
+    "FP_ASPECT_RATIO": 1.0,
+
+    "DIE_AREA": [0, 0, 300, 300]
+}
