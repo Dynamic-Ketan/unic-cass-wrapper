@@ -80,7 +80,7 @@ module user_project_wrapper (
     end
     endgenerate
 
-    clb clb_inst (
+    fpga fpga_inst (
         `ifdef USE_POWER_PINS
         .VPWR   (VDD),
         .VGND   (VSS),

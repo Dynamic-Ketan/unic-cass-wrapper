@@ -122,25 +122,25 @@
         "bondpad_70x70"
     ],
 
-    "MACROS": {
-            "clb": {
-                "gds": "dir::../unic_cass_wrapper_user_project/clb/final/gds/clb.gds",
-                "lef": "dir::../unic_cass_wrapper_user_project/clb/final/lef/clb.lef",
-                "nl": "dir::../unic_cass_wrapper_user_project/clb/final/pnl/clb.pnl.v",
-                "lib": {
-                    "nom_typ_1p20V_25C": "dir::../unic_cass_wrapper_user_project/clb/final/lib/nom_typ_1p20V_25C/clb__nom_typ_1p20V_25C.lib",
-                    "nom_fast_1p32V_m40C": "dir::../unic_cass_wrapper_user_project/clb/final/lib/nom_fast_1p32V_m40C/clb__nom_fast_1p32V_m40C.lib",
-                    "nom_slow_1p08V_125C": "dir::../unic_cass_wrapper_user_project/clb/final/lib/nom_slow_1p08V_125C/clb__nom_slow_1p08V_125C.lib"
-                },
-                "spef": {
-                    "nom_typ_1p20V_25C": "dir::../unic_cass_wrapper_user_project/clb/final/spef/nom/clb.nom.spef"
-                },
-                "instances": {
-                    "clb_inst": {
-                        "location": [530, 530],
-                        "orientation": "N"
-                    }
-                }
+"MACROS": {
+    "fpga": {
+        "gds": "dir::../unic_cass_wrapper_user_project/fpga/final/gds/fpga.gds",
+        "lef": "dir::../unic_cass_wrapper_user_project/fpga/final/lef/fpga.lef",
+        "nl": "dir::../unic_cass_wrapper_user_project/fpga/final/pnl/fpga.pnl.v",
+        "lib": {
+            "nom_typ_1p20V_25C": "dir::../unic_cass_wrapper_user_project/fpga/final/lib/nom_typ_1p20V_25C/fpga__nom_typ_1p20V_25C.lib",
+            "nom_fast_1p32V_m40C": "dir::../unic_cass_wrapper_user_project/fpga/final/lib/nom_fast_1p32V_m40C/fpga__nom_fast_1p32V_m40C.lib",
+            "nom_slow_1p08V_125C": "dir::../unic_cass_wrapper_user_project/fpga/final/lib/nom_slow_1p08V_125C/fpga__nom_slow_1p08V_125C.lib"
+        },
+        "spef": {
+            "nom_typ_1p20V_25C": "dir::../unic_cass_wrapper_user_project/fpga/final/spef/nom/fpga.nom.spef"
+        },
+        "instances": {
+            "fpga_inst": {
+                "location": [530, 530],
+                "orientation": "N"
             }
         }
+    }
+}
 }
